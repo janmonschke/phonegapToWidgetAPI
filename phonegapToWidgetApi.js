@@ -2,6 +2,7 @@
  * This script enables you to access parts of the PhoneGap API through a W3C Widget API interface
  */
 (function(){
+alert(navigator.geolocation);
 // first check if the Widget object exists. If so, you don't need to execute any of this script
 	if(!window.Widget){
 		window.Widget = {};
@@ -19,7 +20,7 @@
 				Widget.Device.DeviceStateInfo.onPositionRetrieved(locationinfo, "gps");
 			},function(){ // fail
 				Widget.Device.DeviceStateInfo.onPositionRetrieved(undefined, "gps");
-			};
+			}
 		};
 		// navigator.geolocation.getCurrentPosition(win, fail); <- PG 
 		// Widget.Device.DeviceStateInfo.onPositionRetrieved(locationinfo, method)
