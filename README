@@ -1,0 +1,5 @@
+Enables you to access parts of the PhoneGap API through a W3C Widget API interface.
+
+Currently supported:
+
+* Widget.Device.DeviceStateInfo.requestPositionInfo
