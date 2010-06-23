@@ -14,11 +14,11 @@ document.addEventListener("deviceready",function(){
 		window.Widget.Device.DeviceStateInfo.requestPositionInfo = function(method){
 			navigator.geolocation.getCurrentPosition(function(pgResult){ // win
 				var info = {};
-				info.latitude = pgResults.coords.latitude;
-				info.longitude = pgResults.coords.longitude;
-				Widget.Device.DeviceStateInfo.onPositionRetrieved(locationinfo, "gps");
+				info.latitude = pgResult.coords.latitude;
+				info.longitude = pgResult.coords.longitude;
+				window.Widget.Device.DeviceStateInfo.onPositionRetrieved(info, "gps");
 			},function(){ // fail
-				Widget.Device.DeviceStateInfo.onPositionRetrieved(undefined, "gps");
+				window.Widget.Device.DeviceStateInfo.onPositionRetrieved(undefined, "gps");
 			});
 		};
 		// navigator.geolocation.getCurrentPosition(win, fail); <- PG 
