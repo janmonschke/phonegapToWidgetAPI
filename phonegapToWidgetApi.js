@@ -1,8 +1,7 @@
 /**
  * This script enables you to access parts of the PhoneGap API through a W3C Widget API interface
  */
-(function(){
-alert(navigator.geolocation);
+document.addEventListener("deviceready",function(){
 // first check if the Widget object exists. If so, you don't need to execute any of this script
 	if(!window.Widget){
 		window.Widget = {};
@@ -27,4 +26,4 @@ alert(navigator.geolocation);
 	}else{
 		// the Widget object exists, so don't do anything
 	}
-})();
+});	
