@@ -20,7 +20,7 @@ alert(navigator.geolocation);
 				Widget.Device.DeviceStateInfo.onPositionRetrieved(locationinfo, "gps");
 			},function(){ // fail
 				Widget.Device.DeviceStateInfo.onPositionRetrieved(undefined, "gps");
-			}
+			});
 		};
 		// navigator.geolocation.getCurrentPosition(win, fail); <- PG 
 		// Widget.Device.DeviceStateInfo.onPositionRetrieved(locationinfo, method)
