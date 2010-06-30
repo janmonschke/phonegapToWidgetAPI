@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<script type="text/css" src="phonegap.js"></script>
+		<script type="text/css" src="phonegapToWidgetApi.js"></script>
+		<script type="text/css">
+			window.onload=function(){
+				window.Widget.Device.DeviceStateInfo.onPositionRetrieved(function(pos,method){
+					var html = "lat: " + pos.latitude + " lng: " + pos.longitude;
+					document.getElementById("geolocation").innerHTML(html);
+				});
+				window.Widget.Device.DeviceStateInfo.requestPositionInfo("gps");
+			};
+		</script>
+		<title>Testing PhoneGapToWidgetApiWrapper</title>
+	</head>
+	<body>
+		<div id="geolocation"></div>
+		<div id="accelerometer"></div>
+	</body>
+</html>
